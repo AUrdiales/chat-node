@@ -12,11 +12,3 @@ socket.on('disconnect', function() {
 socket.on('newMessage', function(message) {
   console.log('new Message', message);
 });
-
-socket.on('united', function(message) {
-  console.log('united!', message);
-})
-
-socket.on('connected', function(message) {
-  console.log('Hi!', message);
-})
