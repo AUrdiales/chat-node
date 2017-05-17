@@ -13,7 +13,7 @@ var {generateMessage, generateLocationMessage} = require('./utils/message');
 io.on('connection', (socket) => {
   console.log('new user connected');
 
-  socket.emit('newMessage', generateMessage('Admin', 'Wellcome to the chat app'));
+  socket.emit('newMessage', generateMessage('Admin', 'Welcome to the chat app'));
   socket.broadcast.emit('newMessage',generateMessage('Admin','new User joined the room'));
 
   socket.on('createMessage', (message, callback) => {
